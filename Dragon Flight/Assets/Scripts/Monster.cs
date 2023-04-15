@@ -8,6 +8,7 @@ public class Monster : MonoBehaviour
 {
     [SerializeField] Sprite _deadSprite;
     [SerializeField] ParticleSystem _particleSystem;
+    [SerializeField] AudioClip[] _clips;
 
     bool _hasDied;
 
@@ -24,7 +25,10 @@ public class Monster : MonoBehaviour
             yield return new WaitForSeconds(delay);
             if (_hasDied == false)
             {
-                //GetComponent<AudioSource>().Play();
+                //int index = UnityEngine.Random.Range(0, 1);
+                //AudioClip clip = _clips[index];
+                //GetComponent<AudioSource>().PlayOneShot(clip);
+                GetComponent<AudioSource>().Play();
             }
         }
     }

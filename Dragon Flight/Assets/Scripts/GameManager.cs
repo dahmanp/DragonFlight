@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
         if (MonstersAreAllDead())
         {
             completeLevelUI.SetActive(true);
+            //var audioSource = GetComponent<AudioSource>();
+            //audioSource.Play();
         }
     }
 
