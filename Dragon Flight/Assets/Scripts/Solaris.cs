@@ -10,7 +10,11 @@ public class Solaris : MonoBehaviour
     [SerializeField] Sprite _deadSprite;
     [SerializeField] ParticleSystem _particleSystem;
     [SerializeField] GameObject _completeLevelUI;
-    public int bossHealth = 20;
+    [SerializeField] GameObject _healthBars;
+    public int maxBossHealth = 20;
+    public int currentBossHealth;
+    public HealthBar healthBar;
+    public AnimationCurve Curve;
 
     bool _hasDied;
 
@@ -21,6 +25,8 @@ public class Solaris : MonoBehaviour
 
     IEnumerator Start()
     {
+        currentBossHealth = maxBossHealth;
+        healthBar.SetMaxHealth(maxBossHealth);
         while (_hasDied == false)
         {
             float delay = UnityEngine.Random.Range(5, 30);
@@ -36,10 +42,11 @@ public class Solaris : MonoBehaviour
     {
         if (collision.gameObject.name == "Ebhi")
         {
-            bossHealth -= 2;
+            currentBossHealth -= 2;
+            healthBar.SetHealth(currentBossHealth);
             _particleSystem.Play();
         }
-            if (bossHealth == 0)
+            if (currentBossHealth == 0)
             {
                 StartCoroutine(Die());
             }
@@ -56,9 +63,11 @@ public class Solaris : MonoBehaviour
 
     void Update()
     {
-        if (bossHealth == 0)
+        transform.position = new Vector3(transform.position.x, Curve.Evaluate((Time.time % Curve.length)), transform.position.z);
+        if (currentBossHealth == 0)
         {
             _completeLevelUI.SetActive(true);
+            _healthBars.SetActive(false);
         }
     }
 }

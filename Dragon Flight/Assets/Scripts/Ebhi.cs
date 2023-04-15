@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Ebhi : MonoBehaviour
 {
     [SerializeField] float _launchForce = 500;
     [SerializeField] float _maxDragDistance = 5;
+    [SerializeField] GameObject _healthBars;
+    [SerializeField] GameObject _failUI;
+    public int maxHealth = 20;
+    public int currentHealth;
+    public HealthBar healthBar;
 
     Vector2 _startPosition;
     Rigidbody2D _rigidbody2D;
@@ -21,6 +28,8 @@ public class Ebhi : MonoBehaviour
 
     void Start()
     {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
         _startPosition = _rigidbody2D.position;
         _rigidbody2D.isKinematic = true;
     }
@@ -73,7 +82,16 @@ public class Ebhi : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        StartCoroutine(ResetAfterDelay());
+        if (currentHealth >= 1)
+        {
+            StartCoroutine(ResetAfterDelay());
+        }
+        
+        if (currentHealth == 0)
+        {
+            _failUI.SetActive(true);
+            _healthBars.SetActive(false);
+        }
     }
 
     IEnumerator ResetAfterDelay()
