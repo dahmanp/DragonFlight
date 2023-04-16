@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] string _nextLevelName;
     [SerializeField] GameObject completeLevelUI;
-    //public GameObject completeLevelUI;
+    public GameObject health;
 
     Monster[] _monsters;
 
@@ -21,16 +21,9 @@ public class GameManager : MonoBehaviour
         if (MonstersAreAllDead())
         {
             completeLevelUI.SetActive(true);
-            //var audioSource = GetComponent<AudioSource>();
-            //audioSource.Play();
+            health.SetActive(false);
         }
     }
-
-   // void GoToNextLevel()
-   // {
-        //completeLevelUI.SetActive(true);
-        //SceneManager.LoadScene(_nextLevelName);
-  //  }
 
     bool MonstersAreAllDead()
     {

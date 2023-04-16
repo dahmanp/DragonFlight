@@ -16,6 +16,12 @@ public class Solaris : MonoBehaviour
     public HealthBar healthBar;
     public AnimationCurve Curve;
 
+    //public GameObject flame;
+    //public float fireMax;
+    //public float fireMin;
+    //public float fireSpeed;
+    //public float nextTime;
+
     bool _hasDied;
 
     private void OnMouseDown()
@@ -29,7 +35,7 @@ public class Solaris : MonoBehaviour
         healthBar.SetMaxHealth(maxBossHealth);
         while (_hasDied == false)
         {
-            float delay = UnityEngine.Random.Range(5, 30);
+            float delay = UnityEngine.Random.Range(5, 10);
             yield return new WaitForSeconds(delay);
             if (_hasDied == false)
             {
@@ -63,6 +69,7 @@ public class Solaris : MonoBehaviour
 
     void Update()
     {
+
         transform.position = new Vector3(transform.position.x, Curve.Evaluate((Time.time % Curve.length)), transform.position.z);
         if (currentBossHealth == 0)
         {

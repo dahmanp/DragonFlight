@@ -11706,6 +11706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 144075837}
+  health: {fileID: 0}
 --- !u!114 &783457192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14550,6 +14551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 144075837}
+  health: {fileID: 0}
 --- !u!114 &1139772471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14698,6 +14700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1420387131}
+  health: {fileID: 0}
 --- !u!114 &1140087844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15244,11 +15247,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5790669651878123057, guid: e3ec9da219c0e90499d15ff0b7cb795a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.38524637
+      value: 0.38524613
       objectReference: {fileID: 0}
     - target: {fileID: 5790669651910545172, guid: e3ec9da219c0e90499d15ff0b7cb795a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.38524637
+      value: 0.38524613
       objectReference: {fileID: 0}
     - target: {fileID: 5790669651910545173, guid: e3ec9da219c0e90499d15ff0b7cb795a, type: 3}
       propertyPath: orthographic size
@@ -17398,6 +17401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 144075837}
+  health: {fileID: 0}
 --- !u!114 &1594195896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18177,6 +18181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 144075837}
+  health: {fileID: 1002305456}
 --- !u!114 &1743191380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18994,6 +18999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1420387131}
+  health: {fileID: 0}
 --- !u!114 &1916901645
 MonoBehaviour:
   m_ObjectHideFlags: 0

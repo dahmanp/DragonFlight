@@ -1806,6 +1806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 144075837}
+  health: {fileID: 0}
 --- !u!114 &783457192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2970,6 +2971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 144075837}
+  health: {fileID: 0}
 --- !u!114 &1139772471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3563,6 +3565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _nextLevelName: 
   completeLevelUI: {fileID: 1185471924}
+  health: {fileID: 1708081431}
 --- !u!1 &1233267868
 GameObject:
   m_ObjectHideFlags: 0
@@ -4699,6 +4702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 144075837}
+  health: {fileID: 0}
 --- !u!114 &1594195896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5494,6 +5498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 144075837}
+  health: {fileID: 1708081431}
 --- !u!114 &1743191380
 MonoBehaviour:
   m_ObjectHideFlags: 0

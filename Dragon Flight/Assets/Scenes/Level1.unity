@@ -784,6 +784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1840445218}
+  health: {fileID: 403471737}
 --- !u!4 &262317397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9135139445056054392, guid: caa8a9b0f34c4814ab2a99d35b980f1f, type: 3}
@@ -1195,6 +1196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1840445218}
+  health: {fileID: 0}
 --- !u!114 &418157872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2421,6 +2423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1840445218}
+  health: {fileID: 0}
 --- !u!114 &1066711177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4329,6 +4332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1840445218}
+  health: {fileID: 0}
 --- !u!114 &1834319131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5508,6 +5512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _nextLevelName: 
   completeLevelUI: {fileID: 451680051}
+  health: {fileID: 403471737}
 --- !u!1001 &6604758344546129920
 PrefabInstance:
   m_ObjectHideFlags: 0
