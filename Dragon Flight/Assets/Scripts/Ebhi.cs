@@ -84,10 +84,6 @@ public class Ebhi : MonoBehaviour
             currentHealth -= 1;
             healthBar.SetHealth(currentHealth);
         }
-        if (end.gameObject.CompareTag("Cliff"))
-        {
-            StartCoroutine(ResetAfterDelay());
-        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -111,7 +107,7 @@ public class Ebhi : MonoBehaviour
 
     IEnumerator ResetAfterDelay()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         _rigidbody2D.position = _startPosition;
         _rigidbody2D.isKinematic = true;
         _rigidbody2D.velocity = Vector2.zero;

@@ -7,6 +7,7 @@ TagManager:
   - Ebhi
   - Flames
   - Cliff
+  - SafeZone
   layers:
   - Default
   - TransparentFX

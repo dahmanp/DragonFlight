@@ -30,4 +30,5 @@ public class Flames : MonoBehaviour
         var audioSource = GetComponent<AudioSource>();
         audioSource.Play();
     }
+
 }

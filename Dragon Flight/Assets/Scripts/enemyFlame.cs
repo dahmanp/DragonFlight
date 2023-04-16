@@ -33,9 +33,14 @@ public class enemyFlame : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Ebhi"))
+        if (other.gameObject.CompareTag("Ebhi"))
         {
-            other.gameObject.GetComponent<Ebhi>().currentHealth -= 2;
+            other.gameObject.GetComponent<Ebhi>().currentHealth -= 1;
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.CompareTag("SafeZone"))
+        {
             Destroy(gameObject);
         }
     }
