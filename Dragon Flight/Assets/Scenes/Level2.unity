@@ -1527,7 +1527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 144075837}
-  health: {fileID: 0}
+  health: {fileID: 835043421}
 --- !u!114 &783457192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2762,7 +2762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 144075837}
-  health: {fileID: 0}
+  health: {fileID: 835043421}
 --- !u!114 &1139772471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3179,7 +3179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5790669651910545173, guid: e3ec9da219c0e90499d15ff0b7cb795a, type: 3}
       propertyPath: orthographic size
-      value: 6.809701
+      value: 6.8461485
       objectReference: {fileID: 0}
     - target: {fileID: 5790669652739668022, guid: e3ec9da219c0e90499d15ff0b7cb795a, type: 3}
       propertyPath: m_Targets.Array.data[0].target
@@ -4235,7 +4235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 144075837}
-  health: {fileID: 0}
+  health: {fileID: 835043421}
 --- !u!114 &1594195896
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,12 +16,6 @@ public class Solaris : MonoBehaviour
     public HealthBar healthBar;
     public AnimationCurve Curve;
 
-    //public GameObject flame;
-    //public float fireMax;
-    //public float fireMin;
-    //public float fireSpeed;
-    //public float nextTime;
-
     bool _hasDied;
 
     private void OnMouseDown()
@@ -69,8 +63,7 @@ public class Solaris : MonoBehaviour
 
     void Update()
     {
-
-        transform.position = new Vector3(transform.position.x, Curve.Evaluate((Time.time % Curve.length)), transform.position.z);
+        
         if (currentBossHealth == 0)
         {
             _completeLevelUI.SetActive(true);

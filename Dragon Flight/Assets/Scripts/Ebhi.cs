@@ -13,6 +13,8 @@ public class Ebhi : MonoBehaviour
     public int maxHealth = 20;
     public int currentHealth;
     public HealthBar healthBar;
+    Collider2D other;
+    public Collider2D end;
 
     Vector2 _startPosition;
     Rigidbody2D _rigidbody2D;
@@ -75,9 +77,17 @@ public class Ebhi : MonoBehaviour
         _rigidbody2D.position = desiredPosition;
     }
 
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-
+        if (other.gameObject.CompareTag("Flames"))
+        {
+            currentHealth -= 1;
+            healthBar.SetHealth(currentHealth);
+        }
+        if (end.gameObject.CompareTag("Cliff"))
+        {
+            StartCoroutine(ResetAfterDelay());
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -86,9 +96,14 @@ public class Ebhi : MonoBehaviour
         {
             StartCoroutine(ResetAfterDelay());
         }
-        
-        if (currentHealth == 0)
+    }
+
+    void Update()
+    {
+        healthBar.SetHealth(currentHealth);
+        if (currentHealth <= 0)
         {
+            Time.timeScale = 0f;
             _failUI.SetActive(true);
             _healthBars.SetActive(false);
         }
